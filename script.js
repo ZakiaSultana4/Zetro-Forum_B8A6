@@ -3,7 +3,6 @@ const fetchdata = () => {
     .then((res) => res.json())
     .then((data) => {
       const newsContainer = document.getElementById("showData");
-
       data.posts.forEach((post) => {
         const newdiv = document.createElement("div");
 
@@ -20,7 +19,6 @@ const fetchdata = () => {
        <div class = 
        
        >  
-    
        <div class="">
            <div class=" flex">
                <p class="mr-4">#${post.category}</p>
@@ -50,14 +48,11 @@ const fetchdata = () => {
         }')" class="hover:cursor-pointer">
            <img src="./assets/Vector.png" alt="">
            </div>
-           
-
         </div>
        </div>
       
    </div>`;
-
-        newsContainer.appendChild(newdiv);
+   newsContainer.appendChild(newdiv);
       });
     }
     );
