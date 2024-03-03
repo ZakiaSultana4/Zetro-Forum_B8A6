@@ -1,0 +1,9 @@
+.loading-spiner img{
+  width: 25%;
+  margin: auto;
+}
+.loading-spiner{
+  text-align: center;
+  padding: 50px;
+  display: none;
+}

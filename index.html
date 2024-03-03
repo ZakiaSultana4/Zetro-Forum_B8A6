@@ -1,16 +1,223 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Retro-Forum</title>
-  <!--daisy ui-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>ZETRO-Forum</title>
+    <link rel="stylesheet" href="style.css">
+    <!--daisy ui-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
-  <!--Tailwind css-->
+    <!--Tailwind css-->
     <script src="https://cdn.tailwindcss.com"></script>
+
 <body>
-    <main></main>
+    <main>
+        <nav class=" max-w-screen-2xl mx-auto md:px-16 my-2 mb-10 px-5">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                        class="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ">
+                        <li>
+                            <a><i class="fa-solid fa-house text-[#12132D99]"></i> Home</a>
+                        </li>
+                        <li>
+                            <a><i class="fa-solid fa-pencil text-[#12132D99]"></i> Edit</a>
+                        </li>
+                        <li>
+                            <a><i class="fa-solid fa-user-plus text-[#12132D99]"></i> Invite</a>
+                        </li>
+                        <li>
+                            <a><i class="fa-brands fa-font-awesome text-[#12132D99]"></i> Feedback</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <a class="btn btn-ghost text-xl">ZETRO</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul
+                            class="menu menu-horizontal *:bg-[#0307121A] *:border *:border-[#0307121A] *:rounded-full *:size-10 space-x-4">
+                            <li title="Home">
+                                <a class="p-0 size-full flex justify-center items-center rounded-full"><i
+                                        class="fa-solid fa-house text-[#12132D99]"></i></a>
+                            </li>
+                            
+                            <li title="Feedback">
+                                <a class="p-0 size-full flex justify-center items-center rounded-full"><i
+                                        class="fa-brands fa-font-awesome text-[#12132D99]"></i></a>
+                            </li>
+                            <li title="Edit">
+                                <a class="p-0 size-full flex justify-center items-center rounded-full"><i
+                                        class="fa-solid fa-pencil text-[#12132D99]"></i></a>
+                            </li>
+                            <li title="Invite">
+                                <a class="p-0 size-full flex justify-center items-center rounded-full"><i
+                                        class="fa-solid fa-user-plus text-[#12132D99]"></i></a>
+                            </li>
+                        </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn bg-[#797dfc] rounded-full text-white">Sign up</a>
+                </div>
+            </div>
+        </nav>
+        <section class="max-w-screen-2xl mx-auto md:px-16 my-2 -mt-10 mb-10 px-5">
+            <div  class="hero bg-indigo-950 px-4 py-12 md:p-20 lg:p-24 bg-color1 bg-[url('assets/bgbanner.png')] bg-no-repeat bg-cover md:bg-contain bg-bottom rounded-[32px]">
+                <div class="hero-content p-0 md:p-4 flex-col-reverse items-center justify-center sm:flex-row-reverse">
+                <div class=" rounded-[32px] lg:p-12">
+
+                    <div class=" flex md:gap-60 flex-col md:flex-row gap-10 ">
+                        <div class="">
+                            <h1 class="text-3xl md:text-4xl lg:text-6xl font-black leading-tight text-white">Welcome to the
+                                <br> <span
+                                    class="bg-[linear-gradient(90deg,rgba(121,125,252,1)0.63%,rgba(121,125,252,0.5)41%)] text-transparent bg-clip-text">ZETRO</span>
+                                Forum
+                            </h1>
+                            <p class=" my-3 md:text-lg text-white">
+                                Share your favorite opinion and win a beautiful gift!
+                                  
+                            </p>
+                            <input id="search" class="text-black px-5 py-3 rounded-full md:w-[400px] relative"
+                                type="text " placeholder="search here">
+                            <button onclick="handleSearch()" class="btn text-white bg-[#797dfc] rounded-full  absolute
+                             left-[178px]
+                             md:left-[583px] ">search</button>
+                        </div>
+                        <div class=" bg-white text-black  mt-3 rounded-lg px-10 py-5 ">
+                            <table class="table my-4 min-w-64">
+                                <tbody class="*:text-color1/80 *:font-medium lg:*:text-lg xl:*:text-xl">
+                                    <tr class="hover">
+                                        <td colspan="2">Registered Users</td>
+                                        <td class="text-right">100</td>
+                                    </tr>
+                                    <tr class="hover">
+                                        <td colspan="2">Forum</td>
+                                        <td class="text-right">10</td>
+                                    </tr>
+                                    <tr class="hover">
+                                        <td colspan="2">Topics</td>
+                                        <td class="text-right">03</td>
+                                    </tr>
+                                    <tr class="hover">
+                                        <td colspan="2">Replies</td>
+                                        <td class="text-right">500</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="max-w-screen-2xl mx-auto md:px-16 my-5  px-5">
+            <div class=" text-center">
+                <p class=" font-bold text-4xl my-1 mt-10">Let’s Discuss</p>
+                <p class=" text-base">Yes, you can run unit tests and view the results directly within the app. The
+                    integrated testing features allow for a streamlined .</p>
+            </div>
+            <div
+                class="max-w-screen-2xl mx-auto md:px-16 my-5  px-5 flex flex-col md:flex-row justify-between mt-6  ">
+                <div class="">
+                    <div id="showSearchData" class=" grid grid-cols-1 gap-4">
+
+                    </div>
+                    <div id="showData" class=" grid grid-cols-1 gap-4">
+
+                    </div>
+                   
+                    <div id="loading-spiner" class="loading-spiner ">
+                        <img src="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif" alt="">
+                    </div>
+                </div>
+                
+              
+                <div class=" md:w-[400px] bg-[#f3f3f4] mt-5">
+                    <div class=" flex justify-between px-5 py-2 ">
+                        <h1 class=" font-bold text-2xl">Title</h1>
+                        <div class=" flex gap-2">
+                            <img src="./assets/Frame.png" alt="">
+                            <p class=" font-semibold flex gap-1"><span>Mark </span> <span> as</span> <span>read(<span
+                                        id="count"></span>)</span></p>
+                        </div>
+                    </div>
+                    <div id="showData2" class="">
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <section class="max-w-screen-2xl mx-auto md:px-16 my-10  px-5">
+            <div class="hero px-4 py-12 lg:px-20 md:py-16 bg-color1 rounded-[32px] bg-indigo-950 ">
+                <div class="hero-content p-0 md:p-4 flex-col-reverse items-center justify-center sm:flex-row-reverse">
+                    <img src="./assets/joinforum.png" alt="image-join=forum">
+                    <div class="text-center sm:text-left">
+                        <h1 class="text-2xl lg:text-4xl font-black leading-tight text-white">Join Our Forum
+                        </h1>
+                        <p class="mx-auto sm:text-justify sm:mx-0 py-6 lg:w-3/4 text-white/60 lg:text-xl font-medium">
+                            This is a thread to welcome all the new members of our Fourum. So please post here! Feel free to introduce yourself and share a little piece of your moments.
+                        </p>
+                        <a
+                            class="btn border-color2 hover:border-color2 bg-color2 hover:bg-color2/80  rounded-full px-6 lg:px-10 font-bold text-sm md:text-xl leading-normal">Register
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+            <section class="max-w-screen-2xl mx-auto md:px-16 my-5  px-5">
+                <div class=" text-center">
+                    <p class=" font-bold text-4xl my-1 mt-10">Latest Posts</p>
+                    <p class=" text-base">
+                        We are chiming in with my support for an Offshore of our Forum.
+                        See latest posts here.
+                    </p>
+                </div>
+                <div id="latest" class="grid grid-cols-1 md:grid-cols-3 gap-2 my-5">
+
+                </div>
+            </section>
+
+            <footer
+            class="max-w-screen-2xl mx-auto md:px-16 mt-5  px-5 footer footer-center py-10 md:py-20 text-color1 bg-indigo-950 text-white">
+            <div class="space-y-3">
+                <h1 class="text-8xl font-black">ZETRO</h1>
+                <p class="font-bold md:w-3/4 opacity-70 text-xl">
+                    This Fourum is where the ambitious come to meet their brand future. We embed design thinking in small and growing businesses with guidance and strategic advice
+                </p>
+                <nav>
+                    <div class="*:hover:cursor-pointer grid grid-flow-col gap-6 ">
+                        <a href="https://www.instagram.com" target="_blank"><i
+                            class="fa-brands fa-instagram text-lg"></i></a>
+                    <a href="https://www.github.com" target="_blank"><i class="fa-brands fa-github text-lg"></i></a>
+                        <a href="https://www.x.com" target="_blank"><i class="fa-brands fa-x-twitter text-lg "></i></a>
+                        <a href="https://www.facebook.com" target="_blank"><i
+                                class="fa-brands fa-facebook-f text-lg"></i></a>
+                      
+                    </div>
+                </nav>
+                <hr class="border container border-[#30325E1A]">
+                <p>Copyright © 2024 - All right reserved</p>
+            </div>
+        </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
+
 </html>
